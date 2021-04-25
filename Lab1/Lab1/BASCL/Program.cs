@@ -1,36 +1,36 @@
 ﻿using System;
 
-namespace BASCL
+namespace basic_calculator 
 {
     class Program
     {
         static void Main(string[] args)
         {
-            float a, b;
-            string c;
+            float first_number, second_number;
+            string sign;
             Console.WriteLine("Hello user. \n Enter the first number");
-            a = float.Parse(Console.ReadLine());
+            first_number = float.Parse(Console.ReadLine());
             Console.WriteLine("Enter the second number");
-            b = float.Parse(Console.ReadLine());
+            second_number = float.Parse(Console.ReadLine());
             Console.WriteLine("Choose operation");
-            c = Console.ReadLine();
+            sign  = Console.ReadLine();
             Console.Write("Result" + "->");
-            switch (c)
+            switch (sign )
             {
                 case "+":
-                    Console.WriteLine(a + b);
+                    Console.WriteLine(first_number + second_number);
                     break;
                 case "-":
-                    Console.WriteLine(a - b);
+                    Console.WriteLine(first_number - second_number);
                     break;
                 case "*":
-                    Console.WriteLine(a * b);
+                    Console.WriteLine(first_number * second_number);
                     break;
                 case "/":
-                    if (b == 0)
+                    if (second_number == 0)
                         Console.WriteLine("invalid second number");
                     else
-                        Console.WriteLine(a / b);
+                        Console.WriteLine(first_number / second_number);
                     break;
                 default:
                     Console.WriteLine("Error");
